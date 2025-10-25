@@ -1,13 +1,11 @@
-# GBNL
-Graded Betti Number Learning of Protein-DNA/RNA Binding Affinity
+# GBNL: Graded Betti Number Learning of Protein-DNA/RNA Binding
 
 ![Workflow Diagram](workflow.png)
-
 
 ---
 
 ## Table of Contents
-- [Introduction](#introduction)
+- [Description](#description)
 - [Model Interpretability](#model-Interpretability)
 - [Prerequisites](#prerequisites)
 - [Datasets](#datasets)
@@ -18,10 +16,7 @@ Graded Betti Number Learning of Protein-DNA/RNA Binding Affinity
 ---
 
 ## Introduction
-![Model Implementation](workflow.pdf)
-The prediction of protein-nucleic acid binding affinity is a critical challenge in biology and drug discovery. Accurate machine learning predictions rely on deciphering both intermolecular and intramolecular interactions within complex molecular 3D structures. We proposed a novel mathematical framework based on commutative algebra theory, which effectively analyzes key molecular interaction patterns without the need of any structure information.By integrating the resulting sequence descriptors with machine learning algorithms, we developed highly competitive models for protein-nucleic acid binding affinity prediction. Benchmark comparisons on an earlier dataset and two new datasets curated in this work, demonstrate that our models achieve robust performance.
-
-> **Keywords**: Persistent commutative algebra, facet persistence barcodes, persistent ideals, commutative algebra learning, protein-nucleic acid binding.
+GBNL is the first commutative algebra graded Betti framework applied to a biomolecular system, encoding nucleic acid organization via graded Betti numbers tracked over a positional filtration for protein-nucleic acid binding prediction. These algebraic descriptors are paired with transformer-based ESM2 protein embeddings to capture interface chemistry at two complementary scales. The result is a compact, interpretable feature set for predicting protein-DNA/RNA binding. GBNL bridges commutative algebra,reduced algebraic topology, combinatorics, and machine learning, establishing a new paradigm for comparative sequence analysis and biomolecular prediction.
 
 ---
 
@@ -34,6 +29,8 @@ An illustration of the comparison between Persistent Homology and Persistent Sta
 ---
 
 ## Prerequisites
+
+The codes have been tested on high-performance cloud computing (HPCC) system. The implementation is written in Python. The individual packages can be installed by following the instructions in their webpages, and are listed below:
 
 - numpy                     1.21.0
 - scipy                     1.7.3
@@ -83,22 +80,10 @@ Protein sequence embeddings were generated with [Transformer Protein language mo
 
 ---
 
-## Citations
+## Citation
 
-- [Suwayyid2025] Faisal Suwayyid and Guo-Wei Wei.  
-  *Persistent Stanley–Reisner Theory*.  
-  arXiv:2503.23482, 2025.  
-  [https://arxiv.org/abs/2503.23482](https://arxiv.org/abs/2503.23482)
+If you wish to cite this work, please use the following citation:
+
   
-- [Shen2023] Shen, Li, Hongsong Feng, Yuchi Qiu, and Guo-Wei Wei.  
-  "SVSBI: sequence-based virtual screening of biomolecular interactions."  
-  *Communications Biology* 6, no. 1 (2023): 536.  
-  [https://doi.org/10.1038/s42003-023-05084-0](https://doi.org/10.1038/s42003-023-05084-0)
-
-- [Rives2021] Rives, Alexander, Joshua Meier, Tom Sercu, Siddharth Goyal, Zeming Lin, Jason Liu, Demi Guo et al.  
-  "Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences."  
-  *Proceedings of the National Academy of Sciences* 118, no. 15 (2021): e2016239118.  
-  [https://doi.org/10.1073/pnas.2016239118](https://doi.org/10.1073/pnas.2016239118)
-
 
 ---
