@@ -46,6 +46,7 @@ The codes were tested on an HPCC environment. The implementation is in Python.
 
 ### Macaulay2 via Singularity (HPCC)
 
+---
 If M2 is not available system-wide, run it through a container and expose an `M2` wrapper on your PATH.
 
 ```bash
