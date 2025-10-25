@@ -44,7 +44,7 @@ The codes were tested on an HPCC environment. The implementation is in Python.
 - biopandas                 0.4.1
 - Macaulay2 (M2)            tested via Singularity/Apptainer container (not a system install)
 
-#### Macaulay2 via Singularity (HPCC)
+#### Macaulay2 Installation via Singularity (HPCC)
 
 If M2 is not available system-wide, run it through a container and expose an `M2` wrapper on your PATH.
 
@@ -102,7 +102,7 @@ Run:
 sbatch run_gbnl.sh
 # (or: bash run_gbnl.sh)
 ```
-By default, this generates four output files for the example SEQ_ID="N-China-F" (primer with a single mutation at position 28881, G→A), one file per nucleotide (A, C, G, T):
+By default, this generates four output files for the example SEQ_ID="N-China-F" (primer with a single mutation at position 28881, G→A), one file per nucleotide (A, C, G, T) for $k$-mer=1:
 ```bash
 ./outputs/001_N-China-F/001_N-China-F_A_vr1_k1.txt
 ./outputs/001_N-China-F/001_N-China-F_C_vr1_k1.txt
