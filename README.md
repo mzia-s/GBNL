@@ -32,17 +32,52 @@ GBNL framework captures a single-base mutation in the N-China-F primer of the SA
 
 ## Prerequisites
 
-The codes have been tested on high-performance cloud computing (HPCC) system. The implementation is written in Python. The individual packages can be installed by following the instructions in their webpages, and are listed below:
+The codes were tested on an HPCC environment. The implementation is in Python.
 
 - numpy                     1.21.0
 - scipy                     1.7.3
-- pytorch                   1.10.0 
+- pytorch                   1.10.0
 - pytorch-cuda              11.7
 - torchvision               0.11.1
 - scikit-learn              1.0.2
 - python                    3.10.12
 - biopandas                 0.4.1
---- 
+- Macaulay2 (M2)            tested via Singularity/Apptainer container (not a system install)
+
+### Macaulay2 via Singularity (HPCC)
+
+If M2 is not available system-wide, you can run it through a container and expose an `M2` wrapper on your PATH.
+
+```bash
+# 0) Ensure Singularity or Apptainer is available
+command -v singularity >/dev/null 2>&1 || module load singularity
+# If your cluster uses Apptainer, replace 'singularity' with 'apptainer' below.
+
+# 1) Paths
+REALHOME="$(readlink -f "$HOME")"
+IMG_DIR="$REALHOME/PGBN/opt/macaulay2"
+IMG="$IMG_DIR/m2-1.24.05.sif"
+WRAP="$REALHOME/bin/M2"
+mkdir -p "$IMG_DIR" "$REALHOME/bin" "$REALHOME/PGBN"
+
+# 2) Pull the image
+[ -f "$IMG" ] || singularity pull "$IMG" docker://unlhcc/macaulay2:1.24.05
+
+# 3) Wrapper so 'M2' behaves like a normal binary
+cat > "$WRAP" <<'SH'
+#!/usr/bin/env bash
+REALHOME="$(readlink -f "$HOME")"
+exec singularity exec "$REALHOME/PGBN/opt/macaulay2/m2-1.24.05.sif" M2 -q "$@"
+SH
+chmod +x "$WRAP"
+
+# 4) Put ~/bin on PATH
+grep -q 'export PATH="$HOME/bin:$PATH"' "$REALHOME/.bashrc" 2>/dev/null || echo 'export PATH="$HOME/bin:$PATH"' >> "$REALHOME/.bashrc"
+export PATH="$REALHOME/bin:$PATH"
+
+# 5) Quick test
+which M2 && M2 --version
+
 
 ## Datasets
 
