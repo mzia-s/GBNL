@@ -94,16 +94,25 @@ Datasets used in this study:
 > **Note:** These datasets are hosted in the [CAP repository](https://github.com/mzia-s/CAP). 
 ---
 
-### I. Modeling with PSRT-based features using CAP pipeline
+## Reproducibility
 
-Codes can be provided upon request. 
+### I. Generation of features for nucleic acids
+Run:
+```bash
+sbatch run_gbnl.sh
+# (or: bash run_gbnl.sh)
+```
+By default, this generates four output files for the example SEQ_ID="N-China-F" (primer with a single mutation at position 28881, G→A), one file per nucleotide (A, C, G, T):
+```bash
+./outputs/001_N-China-F/001_N-China-F_A_vr1_k1.txt
+./outputs/001_N-China-F/001_N-China-F_C_vr1_k1.txt
+./outputs/001_N-China-F/001_N-China-F_G_vr1_k1.txt
+./outputs/001_N-China-F/001_N-China-F_T_vr1_k1.txt
+```
 
 ### II. Generation of sequence-based ESM2 features for proteins
 Protein sequence embeddings were generated with [Transformer Protein language model ESM2](https://github.com/facebookresearch/esm) [Rives2021].
 
----
-
-## Reproducibility
 
 ## Citation
 
