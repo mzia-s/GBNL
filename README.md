@@ -15,7 +15,7 @@ Graded Betti Number Learning of Protein-DNA/RNA Binding Affinity
 ---
 
 ## Introduction
-
+![Model Implementation](workflow.pdf)
 The prediction of protein-nucleic acid binding affinity is a critical challenge in biology and drug discovery. Accurate machine learning predictions rely on deciphering both intermolecular and intramolecular interactions within complex molecular 3D structures. We proposed a novel mathematical framework based on commutative algebra theory, which effectively analyzes key molecular interaction patterns without the need of any structure information.By integrating the resulting sequence descriptors with machine learning algorithms, we developed highly competitive models for protein-nucleic acid binding affinity prediction. Benchmark comparisons on an earlier dataset and two new datasets curated in this work, demonstrate that our models achieve robust performance.
 
 > **Keywords**: Persistent commutative algebra, facet persistence barcodes, persistent ideals, commutative algebra learning, protein-nucleic acid binding.
