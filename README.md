@@ -22,7 +22,8 @@ Interpretable prediction of protein-nucleic acid binding affinity calls for meth
 
 ## Model Interpretability
 
-An illustration of the comparison between Persistent Homology and Persistent Stanley-Reisner Invariant on the N2-U.S-P primer sequence is shown below.
+An illustration of single mutation analysis by GBNL for N-China-F. Rows: nucleotides. Column 1: PH Betti curves; columns 2 and 3: persistent graded Betti, all shown before and after mutation(MUT).
+GBNL framework captures a single-base mutation in the N-China-F primer of the SARS-CoV-2 N gene with high sensitivity. A single alteration in the reference sequence GGGGAACTTCTCCTGCTAGAAT to AGGGAACTTCTCCTGCTAGAAT at position 28881 (G→A) produces measurable topological and algebraic shifts.
 
 ![Model Implementation](covid.png)
 
