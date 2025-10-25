@@ -87,11 +87,11 @@ Datasets used in this study:
 
 | Dataset | Type                 | Number of Complexes | Download |
 |----------|----------------------|---------------------|-----------|
-| S186     | Protein–Nucleic Acid | 186                 | [View in CAP Repository](https://github.com/mzia-s/CAP/Datasets/S186.csv) |
-| S142     | Protein–RNA          | 142                 | [View in CAP Repository](https://github.com/mzia-s/CAP/Datasets/S142.csv) |
-| S322     | Protein–DNA          | 322                 | [View in CAP Repository](https://github.com/mzia-s/CAP/Datasets/S322.csv) |
+| S186     | Protein–Nucleic Acid | 186                 | [View in CAP Repository](https://github.com/mzia-s/CAP/tree/f603c299b2c39e0aad0fa536ddb5adbfcdbc0439/Datasets/S186.csv) |
+| S142     | Protein–RNA          | 142                 | [View in CAP Repository](https://github.com/mzia-s/CAP/tree/f603c299b2c39e0aad0fa536ddb5adbfcdbc0439/Datasets/S142.csv) |
+| S322     | Protein–DNA          | 322                 | [View in CAP Repository](https://github.com/mzia-s/CAP/tree/f603c299b2c39e0aad0fa536ddb5adbfcdbc0439/Datasets/S322.csv) |
 
-> **Note:** These datasets are hosted in the [CAP repository](https://github.com/mzia-s/CAP).
+> **Note:** These datasets are hosted in the [CAP repository](https://github.com/mzia-s/CAP). 
 ---
 
 ### I. Modeling with PSRT-based features using CAP pipeline
