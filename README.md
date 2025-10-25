@@ -9,7 +9,6 @@ GBNL is the first commutative algebra graded Betti framework applied to a biomol
 - [Model Interpretability](#model-Interpretability)
 - [Prerequisites](#prerequisites)
 - [Datasets](#datasets)
-- [Modeling with PSRT-based features using CAP pipeline](#Modeling-with-PSRT-based-features)
 - [Reproducibility](#reproducibility)
 - [Citation](#citations)
 
