@@ -77,7 +77,7 @@ export PATH="$REALHOME/bin:$PATH"
 
 # 5) Quick test
 which M2 && M2 --version
-
+```
 ---
 ## Datasets
 
