@@ -10,7 +10,7 @@ GBNL is the first commutative algebra graded Betti framework applied to a biomol
 - [Prerequisites](#prerequisites)
 - [Datasets](#datasets)
 - [Modeling with PSRT-based features using CAP pipeline](#Modeling-with-PSRT-based-features)
-- [Results](#results)
+- [Reproducibility](#reproducibility)
 - [Citation](#citations)
 
 ---
@@ -55,7 +55,7 @@ command -v singularity >/dev/null 2>&1 || module load singularity
 
 # 1) Paths
 REALHOME="$(readlink -f "$HOME")"
-IMG_DIR="$REALHOME/PGBN/opt/macaulay2"
+IMG_DIR="$REALHOME/GBNL/opt/macaulay2"
 IMG="$IMG_DIR/m2-1.24.05.sif"
 WRAP="$REALHOME/bin/M2"
 mkdir -p "$IMG_DIR" "$REALHOME/bin" "$REALHOME/PGBN"
@@ -67,7 +67,7 @@ mkdir -p "$IMG_DIR" "$REALHOME/bin" "$REALHOME/PGBN"
 cat > "$WRAP" <<'SH'
 #!/usr/bin/env bash
 REALHOME="$(readlink -f "$HOME")"
-exec singularity exec "$REALHOME/PGBN/opt/macaulay2/m2-1.24.05.sif" M2 -q "$@"
+exec singularity exec "$REALHOME/GBNL/opt/macaulay2/m2-1.24.05.sif" M2 -q "$@"
 SH
 chmod +x "$WRAP"
 
@@ -101,20 +101,9 @@ Codes can be provided upon request.
 ### II. Generation of sequence-based ESM2 features for proteins
 Protein sequence embeddings were generated with [Transformer Protein language model ESM2](https://github.com/facebookresearch/esm) [Rives2021].
 
-
-## Results
-
-### Modeling the Protein–Nucleic Acid Datasets
-
-| Dataset | Training/Test Set | PCC  | RMSE (kcal/mol) |  
-|---------|----------|------|------------------|  
-| S186 [result](./Results/S186_predictions.csv) | 186 | 0.705 | 1.79 |  
-| S142 [result](./Results/S142_predictions.csv) | 142 | 0.653 | 2.18 |  
-| S322 [result](./Results/S322_predictions.csv) | 322 | 0.669 | 2.00 |
-
-> Note: Predictions were made using Gradient Boosting Regressor Tree (GBRT) models trained on sequence-based features extracted from protein and nucleic acid sequences. Each dataset was evaluated using independently trained models under 20 random initializations. The predictions for all three datasets can be found in the [results](./Results) folder.
-
 ---
+
+## Reproducibility
 
 ## Citation
 
