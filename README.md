@@ -44,9 +44,8 @@ The codes were tested on an HPCC environment. The implementation is in Python.
 - biopandas                 0.4.1
 - Macaulay2 (M2)            tested via Singularity/Apptainer container (not a system install)
 
-### Macaulay2 via Singularity (HPCC)
+#### Macaulay2 via Singularity (HPCC)
 
----
 If M2 is not available system-wide, run it through a container and expose an `M2` wrapper on your PATH.
 
 ```bash
@@ -78,8 +77,8 @@ export PATH="$REALHOME/bin:$PATH"
 
 # 5) Quick test
 which M2 && M2 --version
----
 
+---
 ## Datasets
 
 Sequence-based representations of proteins and DNA/RNA, along with their corresponding binding affinity labels, are available in the **CAP (Commutative Algebra Prediction)** repository.
@@ -93,8 +92,6 @@ Datasets used in this study:
 | S322     | Protein–DNA          | 322                 | [View in CAP Repository](https://github.com/mushalzia/CAP/blob/main/Datasets/S322.csv) |
 
 > **Note:** These datasets are hosted in the [CAP repository](https://github.com/mushalzia/CAP).
-
-
 ---
 
 ### I. Modeling with PSRT-based features using CAP pipeline
