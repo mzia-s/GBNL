@@ -1,11 +1,11 @@
 # GBNL: Graded Betti Number Learning of Protein-DNA/RNA Binding
 
 ![Workflow Diagram](workflow.png)
-
 ---
+GBNL is the first commutative algebra graded Betti framework applied to a biomolecular system, encoding nucleic acid organization via graded Betti numbers tracked over a positional filtration for protein-nucleic acid binding prediction. These algebraic descriptors are paired with transformer-based ESM2 protein embeddings to capture interface chemistry at two complementary scales. The result is a compact, interpretable feature set for predicting protein-DNA/RNA binding.
 
 ## Table of Contents
-- [Description](#description)
+- [Overview](#description)
 - [Model Interpretability](#model-Interpretability)
 - [Prerequisites](#prerequisites)
 - [Datasets](#datasets)
@@ -15,8 +15,8 @@
 
 ---
 
-## Introduction
-GBNL is the first commutative algebra graded Betti framework applied to a biomolecular system, encoding nucleic acid organization via graded Betti numbers tracked over a positional filtration for protein-nucleic acid binding prediction. These algebraic descriptors are paired with transformer-based ESM2 protein embeddings to capture interface chemistry at two complementary scales. The result is a compact, interpretable feature set for predicting protein-DNA/RNA binding. GBNL bridges commutative algebra,reduced algebraic topology, combinatorics, and machine learning, establishing a new paradigm for comparative sequence analysis and biomolecular prediction.
+## Overview
+Interpretable prediction of protein-nucleic acid binding affinity calls for methods that are sensitive to fine sequence variation yet remain transparent. We present Graded Betti Number Learning (GBNL) for protein-nucleic acid binding, introducing the first use of commutative algebra graded Betti numbers in any biomolecular setting. Building on persistent commutative algebra (PCA)’s role in tracking topological invariants, GBNL represents each sequence as k-mer position sets under sequential positional filtration and derives persistent graded Betti invariants from PCA, producing topological representations of local nucleotide organization. To incorporate cross-molecule context, these topological features are paired with transformer-based protein embeddings, linking nucleotide-level signals with global protein regularities. The graded Betti signal cleanly identifies single-site edits and distinguishes complete mutation patterns. Operating on primary sequences with minimal pre-processing, GBNL bridges commutative algebra, reduced algebraic topology, combinatorics, and machine learning, establishing a new paradigm for comparative sequence analysis and biomolecular prediction
 
 ---
 
