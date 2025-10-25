@@ -46,12 +46,12 @@ The codes were tested on an HPCC environment. The implementation is in Python.
 
 ### Macaulay2 via Singularity (HPCC)
 
-If M2 is not available system-wide, you can run it through a container and expose an `M2` wrapper on your PATH.
+If M2 is not available system-wide, run it through a container and expose an `M2` wrapper on your PATH.
 
 ```bash
 # 0) Ensure Singularity or Apptainer is available
 command -v singularity >/dev/null 2>&1 || module load singularity
-# If your cluster uses Apptainer, replace 'singularity' with 'apptainer' below.
+# If cluster uses Apptainer, replace 'singularity' with 'apptainer' below.
 
 # 1) Paths
 REALHOME="$(readlink -f "$HOME")"
@@ -81,17 +81,18 @@ which M2 && M2 --version
 
 ## Datasets
 
-Sequence-based representations of proteins and DNA/RNA, along with their corresponding binding affinity labels, are provided in this repository.
+Sequence-based representations of proteins and DNA/RNA, along with their corresponding binding affinity labels, are available in the **CAP (Commutative Algebra Prediction)** repository.
 
 Datasets used in this study:
 
-| Dataset | Type                 | Number of Complexes | Download                     |
-|---------|----------------------|---------------------|------------------------------|
-| S186    | Protein–Nucleic Acid | 186                 | [data](./Datasets/S186.csv) |
-| S142    | Protein–RNA          | 142                 | [data](./Datasets/S142.csv) |
-| S322    | Protein–DNA          | 322                 | [data](./Datasets/S322.csv) | 
+| Dataset | Type                 | Number of Complexes | Download |
+|----------|----------------------|---------------------|-----------|
+| S186     | Protein–Nucleic Acid | 186                 | [View in CAP Repository](https://github.com/mushalzia/CAP/blob/main/Datasets/S186.csv) |
+| S142     | Protein–RNA          | 142                 | [View in CAP Repository](https://github.com/mushalzia/CAP/blob/main/Datasets/S142.csv) |
+| S322     | Protein–DNA          | 322                 | [View in CAP Repository](https://github.com/mushalzia/CAP/blob/main/Datasets/S322.csv) |
 
-The S186 dataset was curated from [Shen2023].
+> **Note:** These datasets are hosted in the [CAP repository](https://github.com/mushalzia/CAP).
+
 
 ---
 
