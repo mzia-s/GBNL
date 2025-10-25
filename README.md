@@ -1,6 +1,9 @@
 # GBNL
 Graded Betti Number Learning of Protein-DNA/RNA Binding Affinity
 
+![Workflow Diagram](workflow.pdf)
+
+
 ---
 
 ## Table of Contents
